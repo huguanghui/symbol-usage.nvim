@@ -11,7 +11,7 @@ M.is_list = vim.fn.has('nvim-0.10') == 1 and vim.islist or vim.tbl_islist
 ---@param method string
 ---@return boolean
 function M.support_method(client, method)
-  return client.supports_method('textDocument/' .. method)
+  return client:supports_method('textDocument/' .. method)
 end
 
 function M.some(tbl, cb)
